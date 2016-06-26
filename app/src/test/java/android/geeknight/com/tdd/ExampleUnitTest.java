@@ -1,4 +1,4 @@
-package android.geeknight.com.todo_geeknight;
+package android.geeknight.com.tdd;
 
 import org.junit.Test;
 
