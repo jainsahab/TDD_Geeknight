@@ -7,11 +7,13 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener, ILoginView {
 
   private EditText emailField;
   private EditText passwordField;
+  private TextView loginStatus;
   private LoginController loginController;
 
   @Override
@@ -20,6 +22,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     setContentView(R.layout.activity_login);
     emailField = (EditText) findViewById(R.id.email_text);
     passwordField = (EditText) findViewById(R.id.password_text);
+    loginStatus = (TextView) findViewById(R.id.login_status);
     findViewById(R.id.login_button).setOnClickListener(this);
     loginController = new LoginController(this, new LoginValidator());
   }
