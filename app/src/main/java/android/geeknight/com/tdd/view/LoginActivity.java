@@ -2,6 +2,7 @@ package android.geeknight.com.tdd.view;
 
 import android.geeknight.com.tdd.R;
 import android.geeknight.com.tdd.controller.LoginController;
+import android.geeknight.com.tdd.model.LoginValidator;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -20,7 +21,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     emailField = (EditText) findViewById(R.id.email_text);
     passwordField = (EditText) findViewById(R.id.password_text);
     findViewById(R.id.login_button).setOnClickListener(this);
-    loginController = new LoginController(this);
+    loginController = new LoginController(this, new LoginValidator());
   }
 
   @Override
