@@ -38,11 +38,11 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
   @Override
   public void onLoginSuccess() {
-
+    loginStatus.setText("Login Succeed");
   }
 
   @Override
   public void onLoginFailure() {
-
+    loginStatus.setText("Login Failure");
   }
 }
